@@ -1,7 +1,8 @@
-package io.sahil.shoppe.ui.screens
+package io.sahil.shoppe.ui.screens.auth
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,7 +14,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -30,16 +30,19 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import io.sahil.shoppe.R
-import io.sahil.shoppe.ui.screens.common.ButtonMain
+import io.sahil.shoppe.ui.screens.auth.components.ButtonMain
+import io.sahil.shoppe.ui.screens.common.Modules
+import io.sahil.shoppe.ui.screens.common.Screens
 import io.sahil.shoppe.ui.theme.ShoppeTheme
+import io.sahil.shoppe.ui.theme.TextBlack
 
 @Composable
-fun GetStarted() {
+fun GetStarted(navController: NavController?) {
     Column (
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.White)
             .verticalScroll(rememberScrollState())
             .padding(bottom = 24.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -54,9 +57,16 @@ fun GetStarted() {
         Subtitle(
             modifier = Modifier.padding(bottom = 100.dp)
         )
-        ButtonMain("Let's get started")
+        ButtonMain("Let's get started", {
+            navController?.navigate("${Modules.AUTH}/${Screens.REGISTER}")
+        }, modifier = Modifier.padding(horizontal = 20.dp))
         Spacer(modifier = Modifier.size(18.dp))
-        Login(modifier = Modifier.padding(bottom = 24.dp))
+        LoginRow(
+            modifier = Modifier.padding(bottom = 24.dp),
+            onclick = {
+                navController?.navigate("${Modules.AUTH}/${Screens.LOGIN}")
+            }
+        )
     }
 }
 
@@ -106,20 +116,24 @@ fun Subtitle(modifier: Modifier) {
         textAlign = TextAlign.Center,
         fontSize = 19.sp,
         fontWeight = FontWeight.Light,
-        color = Color(0xFF202020)
+        color = TextBlack
     )
 }
 
 @Composable
-fun Login(modifier: Modifier){
+fun LoginRow(modifier: Modifier, onclick: () -> Unit){
     Row (
-        modifier = modifier,
+        modifier = modifier
+            .clickable(
+                enabled = true,
+                onClick = onclick
+            ),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Center
     ){
         Text(
             text = "I already have an account",
-            color = Color(0xFF202020),
+            color = TextBlack,
             fontSize = 15.sp,
             fontWeight = FontWeight.Light,
             modifier = Modifier.padding(end = 16.dp)
@@ -144,6 +158,6 @@ fun Login(modifier: Modifier){
 @Composable
 fun GreetingPreview2() {
     ShoppeTheme {
-        GetStarted()
+        GetStarted(navController = null)
     }
 }

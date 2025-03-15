@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Shoppe</string>
     <string name="title_activity_get_started_screen">GetStartedScreen</string>
+    <string name="title_activity_shop">ShopActivity</string>
 </resources>

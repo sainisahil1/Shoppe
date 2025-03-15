@@ -1,8 +1,10 @@
-package io.sahil.shoppe.ui.screens.common
+package io.sahil.shoppe.ui.screens.auth.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -16,12 +18,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun ButtonMain(text: String) {
+fun ButtonMain(text: String, onClick: () -> Unit, modifier: Modifier) {
     Box(
-        modifier = Modifier
-            .size(335.dp, 60.dp)
+        modifier = modifier
+            .fillMaxWidth()
             .clip(RoundedCornerShape(14.dp))
             .background(color = Color(0xFF004CFF))
+            .clickable(
+                enabled = true,
+                onClick = onClick
+            )
     ) {
         Text(
             text = text,
@@ -29,6 +35,7 @@ fun ButtonMain(text: String) {
             fontSize = 22.sp,
             fontWeight = FontWeight.Light,
             modifier = Modifier.align(Alignment.Center)
+                .padding(vertical = 15.dp)
         )
     }
 }
@@ -36,5 +43,5 @@ fun ButtonMain(text: String) {
 @Preview
 @Composable
 private fun ButtonMainPreview() {
-    ButtonMain("Let's get started")
+    ButtonMain("Let's get started", {}, modifier = Modifier)
 }
