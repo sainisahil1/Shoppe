@@ -9,13 +9,13 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import io.sahil.shoppe.ui.screens.auth.GetStarted
-import io.sahil.shoppe.ui.screens.auth.LogicScreen
-import io.sahil.shoppe.ui.screens.auth.PasswordScreen
-import io.sahil.shoppe.ui.screens.auth.RegisterScreen
-import io.sahil.shoppe.ui.screens.common.Modules
-import io.sahil.shoppe.ui.screens.common.Screens
-import io.sahil.shoppe.ui.screens.shop.ShopActivity
+import io.sahil.shoppe.presentation.ui.auth.GetStarted
+import io.sahil.shoppe.presentation.ui.auth.LogicScreen
+import io.sahil.shoppe.presentation.ui.auth.PasswordScreen
+import io.sahil.shoppe.presentation.ui.auth.RegisterScreen
+import io.sahil.shoppe.presentation.ui.common.Modules
+import io.sahil.shoppe.presentation.ui.common.Screens
+import io.sahil.shoppe.presentation.ui.shop.ShopActivity
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,7 +50,7 @@ fun MainNavigation(moveToShop: () -> Unit) {
                 LogicScreen(navController)
             }
             composable("${Modules.AUTH}/${Screens.PASSWORD}") {
-                PasswordScreen(navController)
+                PasswordScreen(navController, moveToShop)
             }
         }
     }

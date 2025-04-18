@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Shoppe"
         tools:targetApi="31">
         <activity
-            android:name=".ui.screens.shop.ShopActivity"
+            android:name=".presentation.ui.shop.ShopActivity"
             android:exported="false"
             android:label="@string/title_activity_shop"
             android:theme="@style/Theme.Shoppe" />

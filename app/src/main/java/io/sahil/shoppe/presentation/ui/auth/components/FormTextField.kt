@@ -1,9 +1,11 @@
-package io.sahil.shoppe.ui.screens.auth.components
+package io.sahil.shoppe.presentation.ui.auth.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
@@ -18,12 +20,15 @@ import androidx.compose.ui.unit.dp
 fun FormTextField(
     value: String,
     onValueChange: (String) -> Unit,
-    placeholder: String
+    placeholder: String,
+    modifier: Modifier = Modifier,
+    keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
+    keyboardActions: KeyboardActions = KeyboardActions()
 ) {
     TextField(
         value = value,
         onValueChange = onValueChange,
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .height(54.dp)
             .clip(RoundedCornerShape(30.dp))
@@ -37,6 +42,8 @@ fun FormTextField(
             focusedIndicatorColor = Color.Transparent,
             cursorColor = Color.Black
         ),
-        textStyle = TextStyle(color = Color.Black)
+        textStyle = TextStyle(color = Color.Black),
+        keyboardOptions = keyboardOptions,
+        keyboardActions = keyboardActions
     )
 }

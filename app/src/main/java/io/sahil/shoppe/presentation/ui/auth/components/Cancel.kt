@@ -1,4 +1,4 @@
-package io.sahil.shoppe.ui.screens.auth.components
+package io.sahil.shoppe.presentation.ui.auth.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
-import io.sahil.shoppe.ui.theme.TextBlack
+import io.sahil.shoppe.presentation.theme.TextBlack
 
 @Composable
 fun Cancel(modifier: Modifier = Modifier, onclick: () -> Unit) {

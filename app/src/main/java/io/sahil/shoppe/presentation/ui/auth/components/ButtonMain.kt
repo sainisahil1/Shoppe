@@ -1,4 +1,4 @@
-package io.sahil.shoppe.ui.screens.auth.components
+package io.sahil.shoppe.presentation.ui.auth.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

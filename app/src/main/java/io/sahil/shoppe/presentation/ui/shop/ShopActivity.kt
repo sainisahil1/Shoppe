@@ -1,4 +1,4 @@
-package io.sahil.shoppe.ui.screens.shop
+package io.sahil.shoppe.presentation.ui.shop
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

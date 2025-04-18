@@ -1,4 +1,4 @@
-package io.sahil.shoppe.ui.screens.common
+package io.sahil.shoppe.presentation.ui.common
 
 enum class Screens {
     GET_STARTED,

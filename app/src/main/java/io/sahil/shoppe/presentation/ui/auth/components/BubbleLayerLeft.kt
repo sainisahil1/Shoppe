@@ -1,4 +1,4 @@
-package io.sahil.shoppe.ui.screens.auth.components
+package io.sahil.shoppe.presentation.ui.auth.components
 
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable

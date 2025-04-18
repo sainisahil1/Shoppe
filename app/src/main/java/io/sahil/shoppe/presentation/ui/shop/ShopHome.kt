@@ -1,4 +1,4 @@
-package io.sahil.shoppe.ui.screens.shop
+package io.sahil.shoppe.presentation.ui.shop
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -18,7 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.sahil.shoppe.R
-import io.sahil.shoppe.ui.theme.TextBlack
+import io.sahil.shoppe.presentation.theme.TextBlack
 
 @Composable
 fun ShopHome(modifier: Modifier) {

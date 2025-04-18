@@ -1,4 +1,4 @@
-package io.sahil.shoppe.ui.screens.auth
+package io.sahil.shoppe.presentation.ui.auth
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -24,13 +24,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import io.sahil.shoppe.R
-import io.sahil.shoppe.ui.screens.auth.components.BubbleLayerLeft
-import io.sahil.shoppe.ui.screens.auth.components.ButtonMain
-import io.sahil.shoppe.ui.screens.auth.components.Cancel
-import io.sahil.shoppe.ui.screens.auth.components.FormTextField
-import io.sahil.shoppe.ui.screens.common.Modules
-import io.sahil.shoppe.ui.screens.common.Screens
-import io.sahil.shoppe.ui.theme.TextBlack
+import io.sahil.shoppe.presentation.ui.auth.components.BubbleLayerLeft
+import io.sahil.shoppe.presentation.ui.auth.components.ButtonMain
+import io.sahil.shoppe.presentation.ui.auth.components.Cancel
+import io.sahil.shoppe.presentation.ui.auth.components.FormTextField
+import io.sahil.shoppe.presentation.ui.common.Modules
+import io.sahil.shoppe.presentation.ui.common.Screens
+import io.sahil.shoppe.presentation.theme.TextBlack
 
 @Composable
 fun LogicScreen(navController: NavController?) {

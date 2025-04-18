@@ -1,4 +1,4 @@
-package io.sahil.shoppe.ui.screens.auth
+package io.sahil.shoppe.presentation.ui.auth
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
@@ -31,11 +31,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import io.sahil.shoppe.R
-import io.sahil.shoppe.ui.screens.auth.components.ButtonMain
-import io.sahil.shoppe.ui.screens.auth.components.Cancel
-import io.sahil.shoppe.ui.screens.auth.components.FormTextField
-import io.sahil.shoppe.ui.screens.common.Modules
-import io.sahil.shoppe.ui.screens.common.Screens
+import io.sahil.shoppe.presentation.ui.auth.components.ButtonMain
+import io.sahil.shoppe.presentation.ui.auth.components.Cancel
+import io.sahil.shoppe.presentation.ui.auth.components.FormTextField
+import io.sahil.shoppe.presentation.ui.common.Modules
+import io.sahil.shoppe.presentation.ui.common.Screens
 
 @Composable
 fun RegisterScreen(navController: NavController?) {

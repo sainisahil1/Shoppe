@@ -1,4 +1,4 @@
-package io.sahil.shoppe.ui.screens.shop.ui.theme
+package io.sahil.shoppe.presentation.ui.shop.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
